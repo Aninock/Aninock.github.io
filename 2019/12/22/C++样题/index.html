@@ -240,31 +240,32 @@
         </center>
     </div>
     <div class="content-article">
-        <p>提选自 2018 期末 C++ 样题</p>
-<p>题目 选自 2018 期末 C++ 样题（选了几道有意思的）</p>
-<p>例1 </p>
-<p>设定义了说明语句： </p>
+        <p>题目 选自 2018 期末 C++ 样题（选了几道有意思的）</p>
+<h1 id="例一"><a href="#例一" class="headerlink" title="例一"></a>例一</h1><p>设定义了说明语句： </p>
 <p><code>int i,j;</code></p>
 <p>下列选项中没有语法错误的表达式是  <u><strong>D</strong></u>  </p>
-<p> <strong>A</strong>.<code>(k++)++</code>  <strong>B</strong>.<code>(k+3)=5</code>  <strong>C</strong>.<code>k--/=5</code>  <strong>D</strong>.<code>k---j</code></p>
+<p>   <strong>A</strong>.<code>(k++)++</code>  <strong>B</strong>.<code>(k+3)=5</code>  <strong>C</strong>.<code>k--/=5</code>  <strong>D</strong>.<code>k---j</code></p>
 <p>首先 <code>=</code> 赋值符号 左边不能是 常量，必须是变量；</p>
 <p>而且<code>++</code>he<code>--</code>实际上相当于<code>+=1</code>和<code>-=1</code>  也是包含 赋值符号的；</p>
-<p>所以： <strong>A</strong> <code>（）</code>里面是<code>k+1</code>常量 外面再加<code>++</code> 错误</p>
-<p>​             <strong>B</strong>与<strong>C</strong>  和<strong>A</strong> 同理 赋值符号左边是常量</p>
-<p>​             <strong>D</strong> 的话对的 但要注意 执行顺序是 先<code>k-j</code>;  然后 <code>k=k-1</code> 也就是<code>k</code>只减了1  前面<code>k-j</code>没什么作用</p>
-<p>例2 </p>
-<p>设有语句：   <code>int i=10,j=10;   if(j=0) i=i*i;   else i=i+j;</code> </p>
-<p>执行以上语句后<code>i</code>的值为  <u><strong>A</strong></u>     <strong>A</strong>. 10     B . 20     <strong>C</strong>. 30     <strong>D</strong>. 100</p>
+<p><strong>A</strong>. <code>（）</code>里面是<code>k+1</code>常量 外面再加<code>++</code> 错误</p>
+<p><strong>B</strong>与<strong>C</strong>.  和<strong>A</strong> 同理 赋值符号左边是常量</p>
+<p><strong>D.</strong> 的话对的 但要注意 执行顺序是 先<code>k-j</code>;  然后 <code>k=k-1</code> 也就是<code>k</code>只减了1  前面<code>k-j</code>没什么作用</p>
+<h1 id="例二"><a href="#例二" class="headerlink" title="例二"></a>例二</h1><p>设有语句：   </p>
+<p><code>int i=10,j=10;   if(j=0) i=i*i;   else i=i+j;</code> </p>
+<p>执行以上语句后<code>i</code>的值为  <u><strong>A</strong></u>   </p>
+<p>  <strong>A</strong>. 10     <strong>B</strong> . 20  </p>
+<p>  <strong>C</strong>. 30     <strong>D</strong>. 100</p>
 <p>主要是 <code>if(j=0)</code>    这里不是<code>==</code>   <code>（j=0）</code>的值为 0  所以  等价于 <code>if（0）</code>后面的代码不执行</p>
 <p>注意  如<code>if（j=1)</code> 或者其他的数字  值就是非0   <code>i=100</code></p>
-<p>例5</p>
-<p>若函数f的原型为   <code>int f(char a,char*b=NULL,double c=0.0);</code> </p>
+<h1 id="例三"><a href="#例三" class="headerlink" title="例三"></a>例三</h1><p>若函数f的原型为   </p>
+<p><code>int f(char a,char*b=NULL,double c=0.0);</code> </p>
 <p>则以下调用函数f的选项中存在语法错误的是  <u><strong>B</strong></u>  </p>
-<p>   <strong>A *<em>.<code>f(99)</code>           *</em>B *<em>.<code>f(&#39;A&#39;,4.5);</code>      *</em>C *<em>.<code>f(&#39;A&#39;,&quot;123&quot;)</code>      *</em>D</strong> .<code>f((char)65,&quot;123&quot;)</code></p>
-<p>A. <code>99</code>是传参给 <code>char a</code>  ASCII码 99 是 <code>c</code></p>
-<p>B. <code>4.5</code> 按顺序传给 <code>char*b</code> 错误</p>
-<p>C. <code>&#39;A&#39;</code> 传给 <code>char a</code>    <code>&quot;123&quot;</code> 传给 <code>char*b</code></p>
-<p>D. <code>（char)65</code> 是字符 <code>A</code></p>
+<p>​     *<em>A *</em>.<code>f(99)</code>                    *<em>B *</em>.<code>f(&#39;A&#39;,4.5);</code>     </p>
+<p>​     <strong>C *<em>.<code>f(&#39;A&#39;,&quot;123&quot;)</code>      *</em>D</strong> .<code>f((char)65,&quot;123&quot;)</code></p>
+<p> <strong>A</strong>. <code>99</code>是传参给 <code>char a</code>  ASCII码 99 是 <code>c</code></p>
+<p> <strong>B</strong>. <code>4.5</code> 按顺序传给 <code>char*b</code> 错误</p>
+<p> <strong>C</strong>. <code>&#39;A&#39;</code> 传给 <code>char a</code>    <code>&quot;123&quot;</code> 传给 <code>char*b</code></p>
+<p> <strong>D</strong>. <code>（char)65</code> 是字符 <code>A</code></p>
 
     </div>
 </article>
@@ -403,9 +404,9 @@
                 
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/%E6%97%A5%E5%B8%B8/" style="font-size: 17.79713168103546px;" class="tag-cloud-link">日常</a>
+    <a href="/tags/%E6%97%A5%E5%B8%B8/" style="font-size: 12.10196950350785px;" class="tag-cloud-link">日常</a>
     
-    <a href="/tags/C/" style="font-size: 18.42115117874505px;" class="tag-cloud-link">C++</a>
+    <a href="/tags/C/" style="font-size: 17.249880878763342px;" class="tag-cloud-link">C++</a>
     
 </div>
                 
