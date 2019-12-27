@@ -12,7 +12,7 @@
     
     
     
-    <title>archive_a | ANINOCK</title>
+    <title>一些C++题目 | ANINOCK</title>
     <link href="https://aninock.github.io" rel="prefetch" />
 
     
@@ -128,7 +128,7 @@
                 
                 
                 
-                <li class="current">
+                <li class="">
                     <a href="/archives">
                         <i class="fa fa-archive"></i>归档
                     </a>
@@ -199,19 +199,34 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 gal-right" id="mainstay">
-                    <article class="article well article-body" id="article-archive">
+                    
+<article class="article well article-body" id="article">
     <div class="breadcrumb">
         <i class="fa fa-home"></i>
         <a href="https://aninock.github.io">ANINOCK</a>
         >
-        <span>归档</span>
+        <span>一些C++题目</span>
     </div>
     <!-- 大型设备详细文章 -->
     <div class="hidden-xs">
         <div class="title-article">
             <h1>
-                <a href="/archives">归档</a>
+                <a href="/2019/12/22/C++%E6%A0%B7%E9%A2%98/">一些C++题目</a>
             </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/C/">C++</a>
+                
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2019-12-22
+            </span>
+            
         </div>
     </div>
     <!-- 小型设备详细文章 -->
@@ -219,35 +234,65 @@
         <center>
             <div class="title-article">
                 <h4>
-                    <a href="/archives">归档</a>
+                    <a href="/2019/12/22/C++%E6%A0%B7%E9%A2%98/">一些C++题目</a>
                 </h4>
             </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2019-12-22
+            </p>
+            <p>
+                
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/C/">C++</a>
+                
+                
+                
+            </p>
         </center>
     </div>
-    <div class="content-article" style="margin-top: 30px;">
-        
-        
-            <h1 style="font-size: 24px; margin-top: 40px;">2019年</h1>
-            
-        <div class="alert alert-info" style="font-size: 14px; line-height: 2; font-weight: bold;">
-            
-             
-             
-                        <a href="/2019/12/27/%E5%A4%8D%E4%B9%A0%E4%B8%AD%E8%B8%A9%E5%BE%97%E5%9D%91/">复习中踩的坑</a>
-                        <br>
-            
-             
-                        <a href="/2019/12/22/C++%E6%A0%B7%E9%A2%98/">一些C++题目</a>
-                        <br>
-            
-             
-                        <a href="/2019/12/22/%E5%9D%9A%E6%8C%81/">坚持</a>
-                        <br>
-            
-                    </div>
-        
+    <div class="content-article">
+        <p>题目 选自 2018 期末 C++ 样题（选了几道有意思的）</p>
+<p><a href="https://docs.qq.com/slide/DRHJBVm5GdUtiTWho?xiaolv_wy_tdoc_tid=-711660098_1577010348328&ADUIN=3289113159&ADSESSION=1577020473&ADTAG=CLIENT.QQ.5683_.0&ADPUBNO=26965" target="_blank" rel="noopener">网址</a></p>
+<h1 id="例一"><a href="#例一" class="headerlink" title="例一"></a>例一</h1><p>设定义了说明语句： </p>
+<p><code>int i,j;</code></p>
+<p>下列选项中没有语法错误的表达式是  <u><strong>D</strong></u>  </p>
+<p>   <strong>A</strong>.<code>(k++)++</code>  <strong>B</strong>.<code>(k+3)=5</code>  <strong>C</strong>.<code>k--/=5</code>  <strong>D</strong>.<code>k---j</code></p>
+<p>首先 <code>=</code> 赋值符号 左边不能是 常量，必须是变量；</p>
+<p>而且<code>++</code>he<code>--</code>实际上相当于<code>+=1</code>和<code>-=1</code>  也是包含 赋值符号的；</p>
+<p><strong>A</strong>. <code>（）</code>里面是<code>k+1</code>常量 外面再加<code>++</code> 错误</p>
+<p><strong>B</strong>与<strong>C</strong>.  和<strong>A</strong> 同理 赋值符号左边是常量</p>
+<p><strong>D.</strong> 的话对的 但要注意 执行顺序是 先<code>k-j</code>;  然后 <code>k=k-1</code> 也就是<code>k</code>只减了1  前面<code>k-j</code>没什么作用</p>
+<h1 id="例二"><a href="#例二" class="headerlink" title="例二"></a>例二</h1><p>设有语句：   </p>
+<p><code>int i=10,j=10;   if(j=0) i=i*i;   else i=i+j;</code> </p>
+<p>执行以上语句后<code>i</code>的值为  <u><strong>A</strong></u>   </p>
+<p>  <strong>A</strong>. <code>10</code>     <strong>B</strong> . <code>20</code>  </p>
+<p>  <strong>C</strong>. <code>30</code>     <strong>D</strong>. <code>100</code></p>
+<p>主要是 <code>if(j=0)</code>    这里不是<code>==</code>   <code>（j=0）</code>的值为 0  所以  等价于 <code>if（0）</code>后面的代码不执行</p>
+<p>注意  如<code>if（j=1)</code> 或者其他的数字  值就是非0   <code>i=100</code></p>
+<h1 id="例三"><a href="#例三" class="headerlink" title="例三"></a>例三</h1><p>若函数f的原型为   </p>
+<p><code>int f(char a,char*b=NULL,double c=0.0);</code> </p>
+<p>则以下调用函数f的选项中存在语法错误的是  <u><strong>B</strong></u>  </p>
+<p>​    <strong>A</strong>.<code>f(99)</code>                    <strong>B</strong>.<code>f(&#39;A&#39;,4.5);</code>     </p>
+<p>​    <strong>C</strong>.<code>f(&#39;A&#39;,&quot;123&quot;)</code>      <strong>D</strong>.<code>f((char)65,&quot;123&quot;)</code></p>
+<p> <strong>A</strong>. <code>99</code>是传参给 <code>char a</code>  ASCII码 99 是 <code>c</code></p>
+<p> <strong>B</strong>. <code>4.5</code> 按顺序传给 <code>char*b</code> 错误</p>
+<p> <strong>C</strong>. <code>&#39;A&#39;</code> 传给 <code>char a</code>    <code>&quot;123&quot;</code> 传给 <code>char*b</code></p>
+<p> <strong>D</strong>. <code>（char)65</code> 是字符 <code>A</code></p>
+
     </div>
 </article>
+
+
+<div id="comments-template"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script>
+	if(!window.commentConfig) {
+      window.commentConfig = {}
+      window.commentConfig.title = '一些C++题目'
+    }
+</script>
+
                 </div>
                 <aside class="col-md-4 gal-left" id="sidebar">
     <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
@@ -366,17 +411,17 @@
 
                 
                 <li>
-                    <a href="/archives/2019/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                    <a href="/2019/12/22/C++%E6%A0%B7%E9%A2%98/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
                 </li>
                 
                 
                 <li>
-                    <a href="/archives/2019/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                    <a href="/2019/12/22/C++%E6%A0%B7%E9%A2%98/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
                 </li>
                 
                 
                 <li>
-                    <a href="/archives/2019/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                    <a href="/2019/12/22/C++%E6%A0%B7%E9%A2%98/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
                 </li>
                 
             </ul>
@@ -384,9 +429,9 @@
                 
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/%E6%97%A5%E5%B8%B8/" style="font-size: 10.602251528376566px;" class="tag-cloud-link">日常</a>
+    <a href="/tags/%E6%97%A5%E5%B8%B8/" style="font-size: 19.863699617597952px;" class="tag-cloud-link">日常</a>
     
-    <a href="/tags/C/" style="font-size: 14.325090055468607px;" class="tag-cloud-link">C++</a>
+    <a href="/tags/C/" style="font-size: 19.906305949649067px;" class="tag-cloud-link">C++</a>
     
 </div>
                 
@@ -501,6 +546,30 @@
 <script src="/js/oni.js"></script>
 
 
+
+
+<script src="https://myau.moe/js/comment/gitment.browser.js"></script>
+<script>
+    if(window.commentConfig) {
+      window.commentConfig.id = 'Sun Dec 22 2019 20:35:34 GMT+0800'
+      window.commentConfig.owner = 'Aninock'
+      window.commentConfig.repo = 'comment'
+      window.commentConfig.client_id = '3710efd6e1a0d4d89201'
+      window.commentConfig.client_secret = '258766455ce87aed6691a45c6137dc9188e77ae6'
+      window.commentConfig.redirect_uri = ''
+    } else {
+      window.commentConfig = {
+      	id: 'Sun Dec 22 2019 20:35:34 GMT+0800',
+        owner: 'Aninock',
+        repo: 'comment',
+        client_id: '3710efd6e1a0d4d89201',
+        client_secret: '258766455ce87aed6691a45c6137dc9188e77ae6',
+        redirect_uri: ''
+      }
+    }
+</script>
+
+<script src="/js/comment/gitment.js"></script>
 
 
 </html>
