@@ -12,7 +12,7 @@
     
     
     
-    <title>tags: C++ | ANINOCK</title>
+    <title>复习中踩的坑 | ANINOCK</title>
     <link href="https://aninock.github.io" rel="prefetch" />
 
     
@@ -199,19 +199,34 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 gal-right" id="mainstay">
-                    <article class="article well article-body" id="article-tag">
+                    
+<article class="article well article-body" id="article">
     <div class="breadcrumb">
         <i class="fa fa-home"></i>
         <a href="https://aninock.github.io">ANINOCK</a>
         >
-        <span>标签</span>
+        <span>复习中踩的坑</span>
     </div>
     <!-- 大型设备详细文章 -->
     <div class="hidden-xs">
         <div class="title-article">
             <h1>
-                <a href="/tags/C/index.html">C++</a>
+                <a href="/2020/01/07/%E5%A4%8D%E4%B9%A0%E4%B8%AD%E8%B8%A9%E7%9A%84%E5%9D%91%EF%BC%882%EF%BC%89/">复习中踩的坑</a>
             </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/C/">C++</a>
+                
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2020-01-07
+            </span>
+            
         </div>
     </div>
     <!-- 小型设备详细文章 -->
@@ -219,27 +234,56 @@
         <center>
             <div class="title-article">
                 <h4>
-                    <a href="/tags/C/index.html">C++</a>
+                    <a href="/2020/01/07/%E5%A4%8D%E4%B9%A0%E4%B8%AD%E8%B8%A9%E7%9A%84%E5%9D%91%EF%BC%882%EF%BC%89/">复习中踩的坑</a>
                 </h4>
             </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2020-01-07
+            </p>
+            <p>
+                
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/C/">C++</a>
+                
+                
+                
+            </p>
         </center>
     </div>
-    <div class="content-article" style="margin-top: 30px;">
-        <div class="alert alert-info" style="font-size: 14px; line-height: 2; font-weight: bold;">
-            
-            <a href="/2020/01/07/%E5%A4%8D%E4%B9%A0%E4%B8%AD%E8%B8%A9%E7%9A%84%E5%9D%91%EF%BC%882%EF%BC%89/">复习中踩的坑</a>
-            <br>
-            
-            <a href="/2019/12/27/%E5%A4%8D%E4%B9%A0%E4%B8%AD%E8%B8%A9%E7%9A%84%E5%9D%91/">复习中踩的坑</a>
-            <br>
-            
-            <a href="/2019/12/22/C++%E6%A0%B7%E9%A2%98/">一些C++题目</a>
-            <br>
-            
-            
-        </div>
+    <div class="content-article">
+        <p><img src="https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2530629655,2536656920&fm=26&gp=0.jpg" alt=""></p>
+<p>要大一上期末考了</p>
+<p><del>数学已经炸了</del></p>
+<p>补一些踩的坑</p>
+<h3 id="1-字符数组注意长度"><a href="#1-字符数组注意长度" class="headerlink" title="1.字符数组注意长度"></a>1.字符数组注意长度</h3><p><code>char[3]=&quot;abc&quot;</code> 错误 </p>
+<p>因为<code>&quot;abc&quot;</code> 算上 <code>\0</code> 长度为4</p>
+<h3 id="2-拷贝构造函数格式"><a href="#2-拷贝构造函数格式" class="headerlink" title="2.拷贝构造函数格式"></a>2.拷贝构造函数格式</h3><p><code>AB(AB &amp;)</code></p>
+<h3 id="3-union-大小"><a href="#3-union-大小" class="headerlink" title="3.union 大小"></a>3.<code>union</code> 大小</h3><p>取最大值</p>
+<h3 id="4-break作用"><a href="#4-break作用" class="headerlink" title="4.break作用"></a>4.<code>break</code>作用</h3><p>结束循环 不是结束本次循环</p>
+<h3 id="5-调用函数是-实参和形参-存储"><a href="#5-调用函数是-实参和形参-存储" class="headerlink" title="5.调用函数是 实参和形参 存储"></a>5.调用函数是 实参和形参 存储</h3><p>各占一个独立储存单元</p>
+<h3 id="6-虚函数体现了什么"><a href="#6-虚函数体现了什么" class="headerlink" title="6.虚函数体现了什么"></a>6.虚函数体现了什么</h3><p>动态多态性</p>
+<h3 id="7-访问-二维-数组-a-的-第-i-行-j-个"><a href="#7-访问-二维-数组-a-的-第-i-行-j-个" class="headerlink" title="7.访问 二维 数组 a 的 第 i 行 j 个"></a>7.访问 二维 数组 a 的 第 i 行 j 个</h3><p><code>*( *（a+i）+j)</code></p>
+<h3 id="8-类中成员的初始访问属性"><a href="#8-类中成员的初始访问属性" class="headerlink" title="8.类中成员的初始访问属性"></a>8.类中成员的初始访问属性</h3><p><code>private</code></p>
+<h3 id="9-结构体中成员默认属性"><a href="#9-结构体中成员默认属性" class="headerlink" title="9.结构体中成员默认属性"></a>9.结构体中成员默认属性</h3><p><code>public</code></p>
+<h3 id="10-可能的不成立重载"><a href="#10-可能的不成立重载" class="headerlink" title="10.可能的不成立重载"></a>10.可能的不成立重载</h3><p><code>int u(int a,int b,double c=9);</code></p>
+<p><code>int u(int a,int b);</code></p>
+<p>参数表不同 但仍然可能会不成立</p>
+<p>记载思路  若发现错误 请加QQ 交流</p>
+
     </div>
 </article>
+
+
+<div id="comments-template"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script>
+	if(!window.commentConfig) {
+      window.commentConfig = {}
+      window.commentConfig.title = '复习中踩的坑'
+    }
+</script>
+
                 </div>
                 <aside class="col-md-4 gal-left" id="sidebar">
     <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
@@ -370,17 +414,17 @@
 
                 
                 <li>
-                    <a href="/tags/C/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                    <a href="/2020/01/07/%E5%A4%8D%E4%B9%A0%E4%B8%AD%E8%B8%A9%E7%9A%84%E5%9D%91%EF%BC%882%EF%BC%89/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
                 </li>
                 
                 
                 <li>
-                    <a href="/tags/C/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                    <a href="/2020/01/07/%E5%A4%8D%E4%B9%A0%E4%B8%AD%E8%B8%A9%E7%9A%84%E5%9D%91%EF%BC%882%EF%BC%89/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
                 </li>
                 
                 
                 <li>
-                    <a href="/tags/C/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                    <a href="/2020/01/07/%E5%A4%8D%E4%B9%A0%E4%B8%AD%E8%B8%A9%E7%9A%84%E5%9D%91%EF%BC%882%EF%BC%89/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
                 </li>
                 
             </ul>
@@ -388,9 +432,9 @@
                 
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/%E6%97%A5%E5%B8%B8/" style="font-size: 17.387789783695425px;" class="tag-cloud-link">日常</a>
+    <a href="/tags/%E6%97%A5%E5%B8%B8/" style="font-size: 10.971974493271809px;" class="tag-cloud-link">日常</a>
     
-    <a href="/tags/C/" style="font-size: 15.02300499778633px;" class="tag-cloud-link">C++</a>
+    <a href="/tags/C/" style="font-size: 19.279970727939162px;" class="tag-cloud-link">C++</a>
     
 </div>
                 
@@ -505,6 +549,30 @@
 <script src="/js/oni.js"></script>
 
 
+
+
+<script src="https://myau.moe/js/comment/gitment.browser.js"></script>
+<script>
+    if(window.commentConfig) {
+      window.commentConfig.id = 'Tue Jan 07 2020 00:00:00 GMT+0800'
+      window.commentConfig.owner = 'Aninock'
+      window.commentConfig.repo = 'comment'
+      window.commentConfig.client_id = '3710efd6e1a0d4d89201'
+      window.commentConfig.client_secret = '258766455ce87aed6691a45c6137dc9188e77ae6'
+      window.commentConfig.redirect_uri = ''
+    } else {
+      window.commentConfig = {
+      	id: 'Tue Jan 07 2020 00:00:00 GMT+0800',
+        owner: 'Aninock',
+        repo: 'comment',
+        client_id: '3710efd6e1a0d4d89201',
+        client_secret: '258766455ce87aed6691a45c6137dc9188e77ae6',
+        redirect_uri: ''
+      }
+    }
+</script>
+
+<script src="/js/comment/gitment.js"></script>
 
 
 </html>
